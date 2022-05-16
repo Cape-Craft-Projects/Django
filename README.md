@@ -45,3 +45,7 @@ pipenv --venv
 requirements.txt
 Django>=3.0,<4.0
 psycopg2>=2.8
+
+Cape-Craft-Projects
+
+[Link]'https://github.com/Cape-Craft-Projects/Django'
