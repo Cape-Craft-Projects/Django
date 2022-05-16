@@ -1,13 +1,14 @@
 # Cape Craft Projects
 
 ![Cape Craft Projects Logo](https://durbanvilledistillery.com/images/CCLogo.png)
-
 ___
 
 ## Development Flow
 
 ### Part1
+
 #### Getting Started
+
 python --version
 python -m venv .venv
 activate
@@ -18,10 +19,15 @@ settings.py - Register app
 models.py
 py manage.py makemigrations
 py manage.py migrate
+
 #### Configure Media Folder
+
 #### URLs
+
 #### Models & Admin
+
 #### Testing Models
+
 1. Unittest
 py manage.py test
 pip install coverage
@@ -29,7 +35,6 @@ coverage run manage.py test
 coverage report
 coverage run --omit '*/.venv/*' manage.py test
 coverage html
-
 
 ##### Setting up a Python environment is a good idea
 
