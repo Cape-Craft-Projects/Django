@@ -4,9 +4,13 @@
 
 ___
 
-## Development Flow
+## Part 2 Development Flow
 
 ### Preparation
+
+#### Make a directory for your project
+
+md my project
 
 #### Environments
 
@@ -27,21 +31,78 @@ md my project
 python -m pip install pipenv 3.8.0
 python -m venv ./.venv
 __
-Select iterpreter
+Select iterpreter (venv)
 __
 python -m pip install django
 python -m pip freeze > requirements.txt
 python -m pip freeze
 python -m pip install -r requirements.txt
 __
-Setup Django Project
+
+##### Setup Django Project
+
 __
-django-admin startproject setup .
+django-admin startproject xxxxx .
 
 pipenv install
 pipenv shell
 pipenv --venv
-![myGithub](https://github.com/Cape-Craft-Projects/Django/tree/Tester220514)
+
+##### Run Django
+
+python manage.py runserver
+isort .
+flake8 .
+py manage.py test
+
+#### Sessions
+
+1. Session is teporary and interactive information
+2. Single user per session -save and retrieve arbitrary data on per visit basis
+3. Store the data server side.
+4. User receives a session ID
+5. Session ID is used to retrieve the associated data.
+
+py manaage.py shell
+from django.contrib.sessions.models import Session
+
+##### Enabling Sessions
+
+INSTALLED_APPS = [
+    'django.contrib.sessions',
+]
+
+MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
+]
+
+##### Session Development - Part 1 - Add to Session
+
+Setup
+Create session
+Context processor(site wide access)
+Add to session functionality
+
+## BUILDIING
+
+1. Session py manage.py startapp basket
+Trim unwanted files
+2. Add to settings.py
+basket>basket.py
+![Part2](https://github.com/Cape-Craft-Projects/Django/tree/second_base220517)
+
 requirements.txt
-Django>=3.0,<4.0
-psycopg2>=2.8
+asgiref==3.3.1
+autopep8==1.5.4
+coverage==5.3.1
+Django==3.1.4
+flake8-django==1.1.1
+isort==5.7.0
+mccabe==0.6.1
+Pillow==8.0.1
+pycodestyle==2.6.0
+pyflakes==2.2.0
+pytz==2020.4
+sqlparse==0.4.2
+testfixtures==6.17.1
+toml==0.10.2
