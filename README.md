@@ -55,7 +55,7 @@ isort .
 flake8 .
 py manage.py test
 
-#### Sessions
+### Sessions
 
 1. Session is teporary and interactive information
 2. Single user per session -save and retrieve arbitrary data on per visit basis
@@ -66,7 +66,7 @@ py manage.py test
 py manaage.py shell
 from django.contrib.sessions.models import Session
 
-##### Enabling Sessions
+#### Enabling Sessions
 
 INSTALLED_APPS = [
     'django.contrib.sessions',
@@ -76,7 +76,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
 ]
 
-##### Session Development - Part 1 - Add to Session
+#### Session Development - Part 1 - Add to Session
 
 Setup
 Create session
